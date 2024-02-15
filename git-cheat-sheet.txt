@@ -1,0 +1,1 @@
+git reset, git log shows changes, git checkout takes off files git init intialises 
