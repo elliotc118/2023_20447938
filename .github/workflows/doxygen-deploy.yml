@@ -23,7 +23,7 @@ jobs:
         working-directory: ${{ github.workspace }}/Worksheet5
         run: doxygen
       
-      # Deploy html output from Doxygen to gh-pages
+      # Deploy html output from Doxygen to gh-pages branch 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
