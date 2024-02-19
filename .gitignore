@@ -1021,3 +1021,5 @@ compile_commands.json
 *.sln
 
 *.nsi
+
+*.ini
