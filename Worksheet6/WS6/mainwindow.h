@@ -3,9 +3,7 @@
 
 #include <QMainWindow>
 #include "TreeModel/ModelPartList.h"
-#include "TreeModel/ModelPart.h"
 #include "optiondialog.h"
-
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,20 +19,18 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-
 public slots:
     void handleButton();
-    void ClickedTree();
+    void TreeClick();
     void on_actionOpen_File_triggered();
     void on_actionItem_Options_triggered();
-
 
 signals:
     void statusUpdateMessage(const QString& message, int timeout);
 
 private:
     Ui::MainWindow *ui;
-    void SetupTreeView();
+    void TreeView();
     ModelPartList* partList;
 };
 #endif // MAINWINDOW_H

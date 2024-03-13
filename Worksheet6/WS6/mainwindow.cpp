@@ -9,21 +9,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     connect(ui->pushButton, &QPushButton::released, this, &MainWindow::handleButton);
     connect(ui->pushButton_2, &QPushButton::released, this, &MainWindow::handleButton);
     connect(this, &MainWindow::statusUpdateMessage, ui->statusbar, &QStatusBar::showMessage);
-    connect(ui->treeView, &QTreeView::clicked, this, &MainWindow::ClickedTree);
-    // Assuming this code is within the MainWindow class implementation
-
-    // Connect the 'triggered' signal of QAction 'actionOpenFile' to a slot function named 'alternativeSlotFunctionName'
-    //connect(ui->actionOpen_File, &QAction::triggered, this, &MainWindow::on_actionOpen_File_triggered);
-
+    connect(ui->treeView, &QTreeView::clicked, this, &MainWindow::TreeClick);
     ui->treeView->addAction(ui->actionItem_Options);
 
-
-
-    SetupTreeView();
+    TreeView();
 }
 
 MainWindow::~MainWindow()
@@ -40,7 +32,8 @@ void MainWindow::handleButton()
     emit statusUpdateMessage(QString("Add button was clicked"), 0);
 
 }
-void MainWindow::SetupTreeView()
+
+void MainWindow::TreeView()
 {
 
     /* Create/allocate the ModelList */
@@ -79,7 +72,7 @@ void MainWindow::SetupTreeView()
 
 }
 
-void MainWindow::ClickedTree()
+void MainWindow::TreeClick()
 {
     /* Get the index of the selected item */
     QModelIndex index = ui->treeView->currentIndex();
@@ -107,6 +100,7 @@ void MainWindow::on_actionOpen_File_triggered() {
 
         emit statusUpdateMessage(QString("File: " + fileName + "opened"), 0);
     }
+
 }
 
 void MainWindow::on_actionItem_Options_triggered() {
@@ -138,7 +132,6 @@ void MainWindow::on_actionItem_Options_triggered() {
 
         struct MenuData colour = dialog.getMenuData();
 
-        //part->setColour(colour.r, colour.g, colour.b);
         part->r = colour.r;
         part->g = colour.g;
         part->b = colour.b;

@@ -1,5 +1,6 @@
 #include "optiondialog.h"
 #include "ui_optiondialog.h"
+#include "QSlider"
 
 OptionDialog::OptionDialog(QWidget *parent)
     : QDialog(parent)
@@ -38,12 +39,12 @@ void OptionDialog::setMenuData(MenuData data)
     ui->horizontalSlider_3->setValue(data.b);
     ui->plainTextEdit->setPlainText(data.name);
     ui->checkBox->setChecked(data.isVisible);
-    ui->label_3->setText(QString("R: %1, G: %2, B: %3").arg(data.r).arg(data.g).arg(data.b));
+    ui->label_2->setText(QString("R: %1, G: %2, B: %3").arg(data.r).arg(data.g).arg(data.b));
 
 }
 
 void OptionDialog::SliderUpdate()
 {
     struct MenuData colorData = getMenuData();
-    ui->label_3->setText(QString("R: %1, G: %2, B: %3").arg(colorData.r).arg(colorData.g).arg(colorData.b));
+    ui->label_2->setText(QString("R: %1, G: %2, B: %3").arg(colorData.r).arg(colorData.g).arg(colorData.b));
 }

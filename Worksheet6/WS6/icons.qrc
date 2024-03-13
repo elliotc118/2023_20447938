@@ -1,10 +1,10 @@
 <RCC>
     <qresource prefix="/">
-        <file>../../../Downloads/stopVR.png</file>
-        <file>../../../Downloads/help.png</file>
-        <file>../../../Downloads/print.png</file>
-        <file>../../../Downloads/fileopen.png</file>
-        <file>../../../Downloads/filesave.png</file>
-        <file>../../../Downloads/startVR.png</file>
+        <file>../../icons/fileopen.png</file>
+        <file>../../icons/filesave.png</file>
+        <file>../../icons/help.png</file>
+        <file>../../icons/print.png</file>
+        <file>../../icons/startVR.png</file>
+        <file>../../icons/stopVR.png</file>
     </qresource>
 </RCC>

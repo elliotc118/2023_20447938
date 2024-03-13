@@ -17,12 +17,14 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-	TreeModel/ModelPart.cpp
-	TreeModel/ModelPart.h
-	TreeModel/ModelPartList.cpp
-	TreeModel/ModelPartList.h
         icons.qrc
-
+        optiondialog.cpp
+        optiondialog.h
+        optiondialog.ui
+        TreeModel/ModelPart.cpp
+        TreeModel/ModelPart.h
+        TreeModel/ModelPartList.cpp
+        TreeModel/ModelPartList.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

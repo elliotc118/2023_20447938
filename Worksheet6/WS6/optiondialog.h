@@ -1,5 +1,5 @@
-#ifndef OPTIONDIALOG_H
-#define OPTIONDIALOG_H
+#ifndef OPTION_DIALOG_H
+#define OPTION_DIALOG_H
 
 #include <QDialog>
 
@@ -18,6 +18,7 @@ public:
     void setMenuData(MenuData data);
     void SliderUpdate();
 
+
 private:
     Ui::OptionDialog *ui;
 };
@@ -30,4 +31,4 @@ struct MenuData{
     unsigned int g;
 };
 
-#endif // OPTIONDIALOG_H
+#endif // OPTION_DIALOG_H
